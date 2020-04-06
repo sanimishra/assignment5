@@ -8,10 +8,10 @@ enum inventory{
 type products {
     _id: ID!
     id: Int!
-    category:inventory!
-    name:String!
-    price:Float!
-    image:String!
+    category:inventory
+    name:String
+    price:Float
+    image:String
 }
 input productinputs
 {
@@ -20,12 +20,21 @@ input productinputs
     price:Float!
     image: String!
 }
+input ProductUpdateInputs {
+    category:inventory
+    name:String
+    price:Float
+    image: String
+}
 ##### Top level declarations
 type Query {
   about: String!
   productList:[products!]!
+  products(id: Int!): products!
 }
 type Mutation {
   setAboutMessage(message: String!): String
   productAdd(product: productinputs!):products!
+  productDelete(id: Int!): Boolean!
+  productUpdate(id: Int!, changes: ProductUpdateInputs!): products!
 }

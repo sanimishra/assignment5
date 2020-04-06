@@ -7,10 +7,13 @@ const resolvers = {
     Query: {
       about: about.getMessage,
       productList:product.list,
+      products:product.get
     },
     Mutation: {
       setAboutMessage: about.setMessage,
       productAdd:product.add,
+      productDelete: product.remove,
+      productUpdate: product.update
     },
   };
   const server = new ApolloServer({

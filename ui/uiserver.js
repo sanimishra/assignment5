@@ -1,5 +1,6 @@
 const express = require('express');
 require('dotenv').config();
+const path = require('path');
 
 const port = process.env.UI_SERVER_PORT || 8000;
 const app = express();
@@ -15,4 +16,7 @@ app.get('/env.js', (req, res) => {
 
 app.listen(port, () => {
   console.log(`UI started on port ${port}`);
+});
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve('public/index.html'));
 });

@@ -1,4 +1,5 @@
-/* globals React PropTypes */
+import React from 'react';
+import PropTypes from 'prop-types'
 export default class ProductAdd extends React.Component {
     constructor() {
       super();

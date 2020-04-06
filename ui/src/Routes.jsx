@@ -1,5 +1,5 @@
-/* globals React */
-/* globals React ReactDOM */
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import ProductList from './ProductList.jsx';
 import ProductEdit from './ProductEdit.jsx';
