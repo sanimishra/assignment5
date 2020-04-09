@@ -1,4 +1,5 @@
 /* eslint-disable react/destructuring-assignment */
+/* eslint-disable import/extensions */
 /* eslint "react/react-in-jsx-scope": "off" */
 /* eslint "react/jsx-no-undef": "off" */
 /* eslint "no-alert": "off" */
@@ -10,9 +11,10 @@ import ReactDOM from 'react-dom';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './Routes.jsx';
+
 const element = (
-    <Router>
-      <Routes />
-    </Router>
-  );
+  <Router>
+    <Routes />
+  </Router>
+);
 ReactDOM.render(element, document.getElementById('contents'));

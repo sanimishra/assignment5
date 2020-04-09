@@ -1,9 +1,10 @@
+/* eslint-disable import/extensions */
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import ProductList from './ProductList.jsx';
 import ProductEdit from './ProductEdit.jsx';
 import ProductImage from './ProductImage.jsx';
+
 const NotFound = () => <h1>Page Not Found</h1>;
 export default function Routes() {
   return (

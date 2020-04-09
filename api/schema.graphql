@@ -10,20 +10,20 @@ type products {
     id: Int!
     category:inventory
     name:String
-    price:Float
+    price:Int
     image:String
 }
 input productinputs
 {
     category:inventory!
-    name:String!
-    price:Float!
-    image: String!
+    name:String
+    price:Int
+    image:String
 }
 input ProductUpdateInputs {
     category:inventory
     name:String
-    price:Float
+    price:Int
     image: String
 }
 ##### Top level declarations
