@@ -62,16 +62,7 @@ export default class ProductList extends React.Component {
     });
     const result = await response.json();
     const productdeleteinfo = result.data.productDelete;
-    if (productdeleteinfo && productdeleteinfo.productDelete) {
-      this.setState((prevState) => {
-        const newList = [...prevState.products];
-        if (pathname === `/products/${id}`) {
-          history.push({ pathname: '/products', search });
-        }
-        newList.splice(index, 1);
-        return { products: newList };
-      });
-    } else {
+    if (productdeleteinfo) {
       this.loadData();
     }
   }
